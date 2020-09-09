@@ -1,0 +1,14 @@
+.listacotiza {
+	padding-top: 2em;
+	padding-right: 10em;
+}
+
+.facturada {
+	 background:  lightgreen;
+
+}
+
+.pendiente {
+	background: lightyellow;
+
+}

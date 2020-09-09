@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aframex Manager Sistem</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="app" class="pushable">
+		<div class="ui sidebar inverted vertical menu visible fixed left">
+			<div class="ui logo item">
+				<b><i class = "icon tasks purple"></i>Administración de Cotizaciones</b>
+			</div>
+			<div class="item">
+				<div class="ui message green">
+					Alertas
+				</div>
+			</div>
+		</div>
+		<div class="ui container pusher">
+			<div id="cotiza" class="listacotiza">
+				<table class="ui celled table">
+  					<thead class="ui header">
+  					  <tr><th>Folio</th>
+  					  <th>Fecha</th>
+  					  <th>cliente</th>
+  					  <th>facturada</th>
+  					  <th>Total Partidas</th>
+  					  <th>Proyecto</th>
+  					  <th>Acciones</th>
+  					</tr></thead>
+  					<tbody>
+  						<cotiza
+     						v-bind:cotiza="cotiza"
+     						v-for="cotiza in cotizacionFacturada" />
+  					</tbody>
+  					<tbody>
+  						<cotiza
+     						v-bind:cotiza="cotiza"
+     						v-for="cotiza in cotizacionPendiente" />
+  					</tbody>
+				</table> 
+			</div>
+		</div>
+		 	
+		 
+		
+	</div>
+<script src="app.js"></script>
+</body>
+</html>
